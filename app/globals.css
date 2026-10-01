@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+@plugin 'daisyui' {
+  themes:
+    light --default,
+    dark --prefersdark;
+}
+
+/* Chart colours: validated categorical slots (colour-blind safe), per mode. */
+.viz {
+  --series-1: #2a78d6; /* blue */
+  --series-2: #eb6834; /* orange */
+  --series-3: #1baf7a; /* aqua */
+  --series-neutral: #898781;
+  --chart-gap: var(--color-base-100);
+}
+@media (prefers-color-scheme: dark) {
+  .viz {
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+  }
+}
